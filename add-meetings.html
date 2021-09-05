@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meetings</title>
+    <link rel="stylesheet" href="/external/normalize.css">
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <style>
+        main {
+            margin: 5em 0 0 0;
+        }
+
+        .calender_title {
+            margin-bottom: -1em;
+            margin-left: 2em;
+        }
+
+        #cal_hr {
+            margin-left: 2em;
+            margin-right: 6px;
+        }
+
+        .edit-meeting {
+            display: flex;
+            justify-content: flex-start;
+            padding: 1em 0 0 -0.1em;
+
+            margin: -0.1em 0 0 0;
+            *border: 1px solid red;
+            border-bottom: transparent;
+        }
+
+        .add-meeting {
+            margin: 0 1em 0 0.5em;
+            border: 1px solid black;
+        }
+
+        .filter-meeting {
+            margin: 0 0 0 2em;
+            border: 1px solid black;
+        }
+
+        /* #selected-week-day {
+            line-height: 0.5em;
+        } */
+
+        .input-labels{
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        
+
+        .time-hrs {
+
+            padding: 1.5em 1em;
+            margin-bottom: 0.3em;
+            margin-left: 2em;
+            
+            background-color: lightblue;
+
+        }
+
+        /* .time {
+            
+            padding: 0 0.5em;
+        } */
+
+        span {
+            float: left;
+            margin-top: 1em;
+        }
+
+        .hr {
+          
+            margin: 0em 0.7em;
+        }
+
+        #new-meeting{
+            margin-top: 0;
+            color: white;
+        }
+
+        input[type=submit]{
+        background-color: rgb(92, 182, 218);
+        border: none;
+        border-radius: 3px;
+        color: white;
+        padding: 8px 12px;
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+        .email-desc{
+                color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+
+        <ul class="list-unstylized">
+            <li><a href="/calender.html" target="_self" class="active">Calender</a></li>
+            <li><a href="/add-meetings.html">meetings</a></li>
+            <li><a href="/Teams.html">Teams</a></li>
+        </ul>
+
+        <ul class="list-last">
+            <li><a href="#">hello! user@example.com</a></li>
+            <li><a href="/index.html">logout</a></li>
+        </ul>
+
+
+    </header>
+    <main class="container-calender">
+        
+            <div class="calender_title">
+                <h1>Meetings</h1>
+            </div>
+            <hr id="cal_hr"> <br>
+            <div class="edit-meeting">
+                <div class="filter-meeting">
+                    <a id="selected-date" href="meetings1.html"><h4>Filter / Search meetings</h4></a>
+                   
+                    <!-- <p id="selected-week-day">Saturday</p> -->
+                </div>
+                <div class="add-meeting">   
+                    <a id="selected-date" href="add-meetings.html"><h4 id="selected-date">Add a meeting</h4></a>
+                    <!-- <input class="datepicker-input" type="date" id="date"> -->
+                </div>
+            </div>
+            <!-- <div class="time"> -->
+              
+                <div class="time-hrs">
+                    <h1 id="new-meeting">Add a new meeting</h1><hr>
+                    <form>
+                        <p id="add-meeting-date" class="input-labels">date</p>
+                        <input class="datepicker-input" type="date" id="select-meeting-date">
+                        <p id="add-start-meeting-date" class="input-labels">start time (hh:mm)</p>
+                        <select name="add-start-meeting-hour" id="meeting-hour" >
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5"></option>
+                            <option value="6"></option>
+                            <option value="7"></option>
+                            <option value="8"></option>
+                            <option value="9"></option>
+                            <option value="10"></option>
+                            <option value="11"></option>
+                            <option value="12"></option>
+                            <option value="13"></option>
+                            <option value="14"></option>
+                            <option value="15"></option>
+                            <option value="16"></option>
+                            <option value="17"></option>
+                            <option value="18"></option>
+                            <option value="19"></option>
+                            <option value="20"></option>
+                            <option value="21"></option>
+                            <option value="22"></option>
+                            <option value="23"></option>
+
+                        </select>
+
+                        <select name="add-start-meeting-minute" id="meeting-minute" >
+                            <option value="0">00</option>
+                            <option value="5">05</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="30">30</option>
+                            <option value="35">35</option>
+                            <option value="40">40</option>
+                            <option value="45">45</option>
+                            <option value="50">50</option>
+                            <option value="55">55</option>
+
+                        </select>
+
+                        <p id="add-end-meeting-date" class="input-labels">end time (hh:mm)</p>
+                        <select name="add-end-meeting-hour" id="meeting-hour" >
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5"></option>
+                            <option value="6"></option>
+                            <option value="7"></option>
+                            <option value="8"></option>
+                            <option value="9"></option>
+                            <option value="10"></option>
+                            <option value="11"></option>
+                            <option value="12"></option>
+                            <option value="13"></option>
+                            <option value="14"></option>
+                            <option value="15"></option>
+                            <option value="16"></option>
+                            <option value="17"></option>
+                            <option value="18"></option>
+                            <option value="19"></option>
+                            <option value="20"></option>
+                            <option value="21"></option>
+                            <option value="22"></option>
+                            <option value="23"></option>
+                        </select>
+
+                        <select name="add-end-meeting-minute" id="meeting-minute" >
+                            <option value="0">00</option>
+                            <option value="5">05</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="30">30</option>
+                            <option value="35">35</option>
+                            <option value="40">40</option>
+                            <option value="45">45</option>
+                            <option value="50">50</option>
+                            <option value="55">55</option>
+                        </select>
+
+                        <p><label for="meeting-description" class="input-labels">Description:</label></p>
+                        <p>
+                        <textarea id="meeting-description" name="meeting-description"  rows="4" cols="50" placeholder="what is agenda of the meeting?"></textarea>
+                    </p> 
+
+                    <p  class="input-labels">Email ID of attendees, or team's short</p>
+                    <input class="meeting-email" type="email" placeholder="john@example.com ,@annual-day,mark@example.com">
+                    <p class="email-desc">separrate email ids, team short names by commas - team short name always begin with @</p>
+                    <input type="submit" value="Add meeting" class="Add-meeting-button">
+                    </form>
+
+                 
+                </div>
+               
+        
+    </main>
+</body>
+
+</html>

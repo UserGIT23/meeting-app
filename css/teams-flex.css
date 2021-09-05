@@ -1,0 +1,39 @@
+.main-team{
+    margin: 7em 0 0em 4em;
+    width: 90%;
+    max-width: 1950px;
+    *padding: 0em 0 1em 0.1em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-3 {
+    flex-basis: 31%;
+    *flex-grow: 0;
+    padding: 1em 0;
+    border: 0.5px solid grey;
+    
+}
+
+.plus{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    
+    
+}
+
+#image-plus-anchor{
+    height: 20%;
+}
+
+/* .col-8 {
+    flex-basis: 64%;
+} */

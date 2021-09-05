@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/external/normalize.css">
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/teams-flex.css">
+<style>
+
+
+
+
+     
+
+        .add-team-member-button {
+            background-color: darkcyan;
+
+            color: white;
+            border: none;
+            padding: 5px 5px;
+            border-radius: 3px;
+        }
+
+     
+        .second-half-member,
+        .meeting-name {
+            font-weight: bold;
+        }
+
+        .meeting-name.title {
+            font-size: larger;
+            margin-bottom: 0;
+        }
+
+        .meeting-agenda,
+        .edit-info {
+            color: grey;
+        }
+
+        .first-half,
+        .second-half {
+            padding: 0 0.5em;
+        }
+
+        .img-add {
+            width: 40px;
+            height: 40px;
+            /*margin: 7.8em 0 0 11em;*/
+        }
+
+        .team-title{
+            margin: 0 0 -1em 2em;
+        }
+
+        .team-edit{
+            margin: 0 0 0 2em;  
+
+        }
+
+        #team_hr{
+            margin-left: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+         <ul class="list-unstylized">
+            <li><a href="/calender.html" target="_self" class="active">Calender</a></li>
+            <li><a href="/add-meetings.html">meetings</a></li>
+            <li><a href="/Teams.html">Teams</a></li>
+        </ul>
+
+        <ul class="list-last">
+            <li><a href="#">hello! user@example.com</a></li>
+            <li><a href="/index.html">logout</a></li>
+        </ul>
+    </header>
+
+   
+    </header>
+    <main class="container-calender">
+        <div class="team-title">
+            <h1>Teams</h1>
+            
+        </div> 
+         <hr id="team_hr"> <br>
+        <div class="team-edit">
+            <p class="edit-info">view and aedit teams you are part of.</p>
+            <div class="row">
+                <div class="col-3">
+                    <div class="first-half">
+                        <p class="meeting-name title">Customer acquisition campaign</p>
+                        <p class="meeting-name">@customer-acquistion</p>
+                        <p class="meeting-agenda">Team to come up with strategies to win over customers by end of FY21
+                        </p>
+                        <button class="excuse-button">Excuse yourself</button>
+                        <hr>
+                    </div>
+                    <div class="second-half">
+                        <p><span class="second-half-member">Members</span>:john@example.com,
+                            jane@example.com</p>
+                        <select name="add-members" id="team-member" class="select-team-member">
+                            <option value="">select member</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                        <button class="add-team-member-button">Add</button>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="first-half">
+                        <p class="meeting-name title">MERN stack training</p>
+                        <p class="meeting-name">@MERN-stack-training</p>
+                        <p class="meeting-agenda">Group attending MERN stack training for website revamp project</p>
+                        <button class="excuse-button">Excuse yourself</button>
+                        <hr>
+                    </div>
+                    <div class="second-half">
+                        <p><span class="second-half-member">Members</span>:john@example.com,
+                            jane@example.com</p>
+                        <select name="add-members" id="team-member" class="select-team-member">
+                            <option value="">select member</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                        <button class="add-team-member-button">Add</button>
+                    </div>
+                </div>
+                <div class="col-3 plus">
+                    <div>
+                    <a href="teams.html" id="image-plus-anchor"><img src="add.png" class="img-add" alt="add more"></a>
+                   </div>
+                </div>
+
+                <!-- <div class="col-8">
+                    customer support 2
+                  </div>   -->
+
+            </div>
+        </div>
+   
+    </main>
+</body>
+
+</html>

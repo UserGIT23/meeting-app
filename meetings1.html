@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meetings1 - filter</title>
+    <link rel="stylesheet" href="/external/normalize.css">
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <style>
+        .add-team-member-button {
+            background-color: darkcyan;
+
+            color: white;
+            border: none;
+            padding: 5px 5px;
+            border-radius: 3px;
+        }
+
+        main {
+            margin: 5em 0 0 0;
+        }
+
+        .calender_title {
+            margin-bottom: -1em;
+            margin-left: 2em;
+        }
+
+
+        .second-half-member,
+        .meeting-name {
+            font-weight: bold;
+        }
+
+        #cal_hr {
+            margin-left: 2em;
+            margin-right: 6px;
+        }
+
+        .edit-meeting {
+            display: flex;
+            justify-content: flex-start;
+            padding: 1em 0 0 -0.1em;
+
+            margin: -0.1em 0 0 0;
+            *border: 1px solid red;
+            border-bottom: transparent;
+        }
+
+        .add-meeting {
+            margin: 0em 1em 0 0.5em;
+            border: 1px solid black;
+        }
+
+        .filter-meeting {
+            margin: 0 0 0 2em;
+            border: 1px solid black;
+        }
+
+        /* #selected-week-day {
+            line-height: 0.5em;
+        } */
+
+
+
+        .time-hrs {
+
+            padding: 1.5em 1em;
+            margin-bottom: 0.3em;
+            margin-left: 2em;
+
+            background-color: lightblue;
+
+        }
+
+        .search-criteria-heading {
+            padding: 0 0;
+            margin-left: 1.9em;
+            background-color: white;
+
+        }
+
+        .search-criteria-heading.overview {
+            padding: 0 1em 0.8em 1em;
+            border: thin solid lightgray;
+            border-radius: 3px;
+        }
+
+         hr.search-criteria-heading{
+            border:none;
+            background-color: lightgray;
+            height: 1px;
+          
+        }
+
+        .search-criteria-heading.overview hr{
+            border:none;
+            background-color: lightgray;
+            height: 1px;
+        }
+
+        .time-info {
+            font-size: medium;
+            font-weight: normal;
+        }
+
+        /* .time {
+            
+            padding: 0 0.5em;
+        } */
+
+
+        .span-attendees {
+            font-weight: bold;
+        }
+
+      
+
+        #new-meeting {
+            margin-top: 0;
+            color: white;
+        }
+
+        .filter-search-btn {
+            background-color: rgb(92, 182, 218);
+            border: none;
+            border-radius: 3px;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+
+        <ul class="list-unstylized">
+            <li><a href="/calender.html" target="_self" class="active">Calender</a></li>
+            <li><a href="/add-meetings.html">meetings</a></li>
+            <li><a href="/Teams.html">Teams</a></li>
+        </ul>
+
+        <ul class="list-last">
+            <li><a href="#">hello! user@example.com</a></li>
+            <li><a href="/index.html">logout</a></li>
+        </ul>
+
+
+    </header>
+    <main class="container-calender">
+
+        <div class="calender_title">
+            <h1>Meetings</h1>
+        </div>
+        <hr id="cal_hr"> <br>
+        <div class="edit-meeting">
+            <div class="filter-meeting">
+                <a id="selected-date" href="meetings1.html">
+                    <h4>Filter / Search meetings</h4>
+                </a>
+
+                <!-- <p id="selected-week-day">Saturday</p> -->
+            </div>
+            <div class="add-meeting">
+                <a id="selected-date" href="add-meetings.html">
+                    <h4 id="selected-date">Add a meeting</h4>
+                </a>
+                <!-- <input class="datepicker-input" type="date" id="date"> -->
+            </div>
+        </div>
+        <!-- <div class="time"> -->
+
+        <div class="time-hrs">
+            <h1 id="new-meeting">Search for meeting</h1>
+            <hr >
+            <form>
+                <p id="filter-meeting-date">date</p>
+                <select name="filter-meeting-date" id="select-filter-date">
+                    <option value="ALL">ALL</option>
+                    <option value="PAST">PAST</option>
+                    <option value="TODAY">TODAY</option>
+                    <option value="UPCOMING">UPCOMING</option>
+                </select>
+
+                <p><label for="search-description">search for</label></p>
+                <p>
+                    <textarea id="search-textarea" name="search-description" rows="3" cols="146"
+                        placeholder="search using words which describe the meeting"></textarea>
+                </p>
+                <button class="filter-search-btn">Search</button>
+            </form>
+        </div>
+        <div class="search-criteria-heading">
+            <h2>Meeting matching search criteria</h2>
+        </div>
+        <hr class="search-criteria-heading"><br>
+
+        <div class="search-criteria-heading overview">
+            <h3 class="date-info">19 September, 2020 <span class="time-info">06:00 - 07:00</span></h3>
+            <p id="selected-week-day">Project kickoff</p>
+            <button class="excuse-button">Excuse yourself</button> 
+            <hr>
+            <p><span class="span-attendees">Attendees</span>:john@example.com,
+                jane@example.com</p>
+            <select name="add-members" id="team-member" class="select-team-member">
+                <option value="">select member</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <button class="add-team-member-button">Add</button>
+        </div>
+        <br>
+        <div class="search-criteria-heading overview">
+            <h3 class="date-info">19 September, 2020 <span class="time-info">09:00 - 10:30</span></h3>
+            <p id="selected-week-day">AWS architecture</p>
+            <button class="excuse-button">Excuse yourself</button>
+            <hr>
+            <p><span class="span-attendees">Attendees</span>:john@example.com,
+                jane@example.com</p>
+            <select name="add-members" id="team-member" class="select-team-member">
+                <option value="">select member</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <button class="add-team-member-button">Add</button>
+        </div>
+
+    </main>
+</body>
+
+</html>

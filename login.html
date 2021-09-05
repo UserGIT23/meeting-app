@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/external/normalize.css">
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/login.css">
+
+    <style>
+        #loginButton{
+            width: 20%;
+            margin: 0 8em;
+        }
+
+        .psw{
+            padding: 0 6.4em;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <main>
+        <div class="container-login" >
+        <form action="calender.html" class="form-login d-flex" method="GET" enctype="multipart/form-data">
+            <div class="form-login">
+                <label for="emailId">Sign In with your registered Email ID:<br></label>
+                <input type="email" id="emailId" name="email" placeholder="user@example.com"> <br> 
+                <label for="pwd">Password:<br> </label>
+                <input type="password" id="pwd" name="passwrod" placeholder="*****"><br>
+                <input type="submit" id="loginButton" value="login"/>
+                <p class="psw">Forgot <a href="sign-up.html">password?</a></p>
+            </div>
+         
+        </form>
+    </div>
+    </main>
+</body>
+</html>

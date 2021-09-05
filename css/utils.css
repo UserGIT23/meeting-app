@@ -1,0 +1,61 @@
+.container-calender {
+    background-color: white;
+    padding: 1em 0 1em 1em;
+    width: 94%;
+    max-width: 1950px;
+    margin: 4em 1em 0 1em;
+}
+
+
+.excuse-button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 3px;
+
+}
+
+.select-team-member {
+    padding: 3px;
+    border-color: lightgray;
+    border-radius: 2px;
+}
+/*
+.d-flex{
+    display: flex;
+    *justify-content: space-between;
+}*/
+
+.jumbotron {
+    padding: 0 1em 1em 1em;
+    font-size: 1.5em;
+    background-color: rgb( 215, 180, 190 );
+}
+
+
+.my-sm {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+}
+
+.my-md {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.my-lg {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/*common title hr tag */
+
+
+
+
+
+/* main{
+    margin: 0em 1em 0 3em;
+} */
+
