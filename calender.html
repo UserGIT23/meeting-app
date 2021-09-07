@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/app.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         main {
             margin: 5em 0 0 0;
@@ -121,9 +121,7 @@
 
 <body>
 
-    <header class="navbar">
-
-
+    <header class="navbar"  id="myTopnav">
         <ul class="list-unstylized">
             <li><a href="calender.html" target="_self" class="active">Calender</a></li>
             <li><a href="add-meetings.html">meetings</a></li>
@@ -134,11 +132,22 @@
             <li><a href="#">hello! user@example.com</a></li>
             <li><a href="index.html">logout</a></li>
         </ul>
-
-
-
-
     </header>
+
+
+    <!-- <header class="navbar1 responsive" id="myTopnav">
+        <a href="calender.html" target="_self" class="active">Calender</a>
+        <a href="add-meetings.html">meetings</a>
+        <a href="Teams.html">Teams</a>
+        <a href="index.html">logout</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    
+    </header> -->
+
+
+
     <main class="container-calender">
 
             <div class="calender_title">
@@ -218,6 +227,18 @@
             </div>
 
     </main>
+
+    <!-- <script>
+        function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "navbar") {
+    x.className += " navbar1";
+  } else {
+    x.className = "navbar";
+  }
+}
+
+    </script>    -->
 </body>
 
 </html>

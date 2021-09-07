@@ -1,5 +1,3 @@
-
-
 .navbar{
     display: flex;
     flex-direction: row;
@@ -7,14 +5,33 @@
     background-color: lightgray;
     z-index: 1;
     width: 100%;
-    /* padding-left: 1em; */
     position: fixed;
     top: 0;
     height: 42px;
     font-size: 21px;
 }
 
-
+/* @media screen and (max-width: 600px) {
+    .navbar1 a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar1.responsive {position: relative;}
+    .navbar1.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar1.responsive a {
+      float: none;
+      display: none;
+      text-align: left;
+    }
+  } */
 
 li:hover{
 background-color: darkgray;

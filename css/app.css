@@ -5,3 +5,19 @@ html {
 body{
     background-color: white;
 }
+
+/* ----------------media query to all pages------------------ */
+
+@media screen and (max-width: 900px) and (min-width: 500px)  {
+    body{
+      width: 100%; 
+    } 
+  }
+  
+  /* ----------------media query calender page------------------ */
+
+  @media screen and (max-width: 900px) and (min-width: 500px)  {
+    div{
+      width: 100%; 
+    } 
+  }
